@@ -215,7 +215,7 @@ public class HelloController {
             resetLabel(true);
         }else{
             resetLabel(false);
-            
+
         }
 
     }

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="750.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.draganddrop.HelloController">
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="750.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.draganddrop.HelloController">
    <children>
       <GridPane>
         <columnConstraints>
@@ -25,63 +25,59 @@
           <RowConstraints minHeight="10.0" prefHeight="300.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <StackPane fx:id="s00" prefHeight="150.0" prefWidth="200.0">
+            <StackPane fx:id="s00" prefHeight="300.0" prefWidth="150.0">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDetected="#stackDragDetected" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
-            <StackPane fx:id="s01" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+            <StackPane fx:id="s01" prefHeight="300.0" prefWidth="150.0" GridPane.columnIndex="1">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDetected="#stackDragDetected" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
             <StackPane fx:id="s02" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDetected="#stackDragDetected" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
             <StackPane fx:id="s03" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDetected="#stackDragDetected" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
             <StackPane fx:id="s04" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDetected="#stackDragDetected" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
-            <StackPane fx:id="s10" onDragDropped="#stackDragDropped" onDragOver="#stackDragOver" onMouseDragExited="#stackDragExited" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+            <StackPane fx:id="s10" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDropped="#stackDragDropped" onDragOver="#stackDragOver" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
             <StackPane fx:id="s11" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <StackPane fx:id="s11" onDragDropped="#stackDragDropped" onDragOver="#stackDragOver" onMouseDragExited="#stackDragExited" prefHeight="150.0" prefWidth="200.0">
-                     <children>
-                        <ImageView pickOnBounds="true" preserveRatio="true" />
-                     </children>
-                  </StackPane>
+                  <ImageView onDragDropped="#stackDragDropped" onDragOver="#stackDragOver" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
             <StackPane fx:id="s12" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDropped="#stackDragDropped" onDragOver="#stackDragOver" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
             <StackPane fx:id="s13" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDropped="#stackDragDropped" onDragOver="#stackDragOver" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
             <StackPane fx:id="s14" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <children>
-                  <ImageView pickOnBounds="true" preserveRatio="true" />
+                  <ImageView onDragDropped="#stackDragDropped" onDragOver="#stackDragOver" pickOnBounds="true" preserveRatio="true" />
                </children>
             </StackPane>
          </children>
       </GridPane>
-      <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="placeholder">
+      <Label fx:id="labelStatus" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="placeholder">
          <font>
             <Font size="24.0" />
          </font>

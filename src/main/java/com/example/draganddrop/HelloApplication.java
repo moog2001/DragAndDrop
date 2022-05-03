@@ -15,6 +15,7 @@ public class HelloApplication extends Application {
         Parent parentLoader = fxmlLoader.load();
         Scene scene = new Scene(parentLoader);
         HelloController controller = (HelloController) fxmlLoader.getController();
+        scene.getStylesheets().add("style.css");
         controller.init(this);
         stage.setTitle("Hello!");
         stage.setScene(scene);
